@@ -1,0 +1,210 @@
+﻿<div class="wrap" id="gallery<?php echo $id; ?>"> 
+
+<form method="post" action="" >
+  <fieldset>
+	  <legend><strong>Banner Design <?php echo $id; ?>. Write in your Posts: [banner_design <?php echo $id; ?> /]</strong></legend>
+			<p><strong>Main params</strong><br/>
+			  <label for="folder<?php echo $id; ?>" accesskey="f">Images Folder(Sample: images/): 
+			    <input type='text' id='folder<?php echo $id; ?>' name='folder<?php echo $id; ?>'  value='<?php echo $folder; ?>'/>
+		      </label>
+			  <br/>
+			  <br/>
+			  <label for="width<?php echo $id; ?>" accesskey="w">Flash Width(px or %, default: 100%): 
+			    <input type='text' id='width<?php echo $id; ?>'  name='width<?php echo $id; ?>'  value='<?php echo $width; ?>'/>
+		      </label>
+			  <br/>
+			  <label for="height<?php echo $id; ?>" accesskey="h">Flash Height (px, default 250px):
+			    <input type='text' id='height<?php echo $id; ?>'  name='height<?php echo $id; ?>'  value='<?php echo $height; ?>'/>
+		      </label>
+          </p>
+			<p>
+			  <label for="music<?php echo $id; ?>" accesskey="h">URL mp3 file:
+			    <input type='text' id='music<?php echo $id; ?>'  name='music<?php echo $id; ?>'  value='<?php echo $music; ?>'/>
+		      </label>
+            </p>
+            <p>
+			  <label for="tit<?php echo $id; ?>" accesskey="h">Plugin title:
+			    <input type='text' id='tit<?php echo $id; ?>'  name='tit<?php echo $id; ?>'  value='<?php echo $tit; ?>'/>
+		      </label>
+            </p>
+            
+            <label for="color1<?php echo $id; ?>" accesskey="h">Text color:
+    <input type='text' id='color1<?php echo $id; ?>'  name='color1<?php echo $id; ?>'  value='<?php echo $color1; ?>'/>
+  </label>
+  <br/>
+  <label for="color3<?php echo $id; ?>" accesskey="h">Color secondary:
+    <input type='text' id='color3<?php echo $id; ?>'  name='color3<?php echo $id; ?>'  value='<?php echo $color3; ?>'/>
+  </label>
+  <br/>
+          
+<p>
+  <label for="timeback<?php echo $id; ?>" accesskey="s">Transition time in seconds:
+    <input type='text' id='timeback<?php echo $id; ?>'  name='timeback<?php echo $id; ?>'  value='<?php echo $timeback; ?>'/>
+  </label>
+  <br/>
+  <label>Scale images?:
+    <select name="onover<?php echo $id; ?>" id="onover<?php echo $id; ?>">
+      <option value="0" <?php if($onover==0) echo ' selected="selected"'; ?>>None</option>
+      <option value="1" <?php if($onover==1) echo ' selected="selected"'; ?>>Scale</option>
+    </select>
+  </label>
+</p>
+<p>Images post transition:
+  <select name="text3<?php echo $id; ?>" id="text3<?php echo $id; ?>">
+    <option value="center" <?php if($text3=='center') echo ' selected="selected"'; ?>>None</option>
+    <option value="left" <?php if($text3=='left') echo ' selected="selected"'; ?>>Zoom</option>
+    <option value="right" <?php if($text3=='right') echo ' selected="selected"'; ?>>Blur</option>
+  </select>
+</p>
+<p>Pause?:
+  <select name="text4<?php echo $id; ?>" id="text4<?php echo $id; ?>">
+    <option value="0" <?php if($text4=='0') echo ' selected="selected"'; ?>>off</option>
+    <option value="1" <?php if($text4=='1') echo ' selected="selected"'; ?>>on</option>
+  </select>
+</p>
+<p>Image Effect Type:
+  <select name="type<?php echo $id; ?>" id="type<?php echo $id; ?>">
+    <option value="0" <?php if($type=='0') echo ' selected="selected"'; ?>>Lineal</option>
+    <option value="1" <?php if($type=='1') echo ' selected="selected"'; ?>>Random</option>
+  </select>
+</p>
+<p>
+  <label for="round2<?php echo $id; ?>" accesskey="h">Round Plugin:
+    <input type='text' id='round2<?php echo $id; ?>'  name='round2<?php echo $id; ?>'  value='<?php echo $round2; ?>'/>
+  </label>
+</p>
+<p><br/>
+  <label for="links<?php echo $id; ?>" accesskey="l">Image Links(separated by BACKSPACE): <br/>
+    <textarea name="links<?php echo $id; ?>" rows="5" cols="40" id="links<?php echo $id; ?>"><?php echo $links; ?></textarea>
+  </label>
+</p>
+<p>
+  <label for="target<?php echo $id; ?>" accesskey="h">Target link:
+    <input type='text' id='target<?php echo $id; ?>'  name='target<?php echo $id; ?>'  value='<?php echo $target; ?>'/>
+  </label>
+  <input name="id" type="hidden" id="id" value="<?php echo $id; ?>" /> 
+  (_blank, _self, _parent, ...)
+</p>
+<p>
+  <label for="title<?php echo $id; ?>" accesskey="t">Images Titles(separated by BACKSPACE):<br />
+	      <textarea id="title<?php echo $id; ?>"  rows="5" cols="40" name="title<?php echo $id; ?>"  ><?php echo $title; ?></textarea>
+	      </label>
+	  </p>
+<p>
+  
+  <br/>
+  
+  
+  
+  Show image Controls(next and prev buttons)?:
+  <select name="controls<?php echo $id; ?>" id="controls<?php echo $id; ?>">
+    <option value="0" <?php if($controls==0) echo ' selected="selected"'; ?>>None</option>
+    <option value="1" <?php if($controls==1) echo ' selected="selected"'; ?>>Yes</option>
+  </select>
+  </p>
+<p><strong>Effect params</strong><br/>
+  <label for="columns<?php echo $id; ?>" accesskey="h">Effect Columns:
+    <input type='text' id='columns<?php echo $id; ?>'  name='columns<?php echo $id; ?>'  value='<?php echo $columns; ?>'/>
+  </label>
+  <br/>
+  <label for="rows<?php echo $id; ?>" accesskey="h">Effect Rows:
+    <input type='text' id='rows<?php echo $id; ?>'  name='rows<?php echo $id; ?>'  value='<?php echo $rows; ?>'/>
+  </label>
+
+<br/>
+  <label for="round1<?php echo $id; ?>" accesskey="h">Effect Round:
+    <input type='text' id='round1<?php echo $id; ?>'  name='round1<?php echo $id; ?>'  value='<?php echo $round1; ?>'/>
+  </label>
+  <br/>
+  <label for="border1<?php echo $id; ?>" accesskey="h">Effect border:
+    <input type='text' id='border1<?php echo $id; ?>'  name='border1<?php echo $id; ?>'  value='<?php echo $border1; ?>'/>
+  </label> 
+    <br/>
+  
+    Speed effect:
+    <select name="speed<?php echo $id; ?>" id="speed<?php echo $id; ?>">
+      <option value="2" <?php if($speed=="2") echo ' selected="selected"'; ?>>Very Fast</option>
+      <option value="6" <?php if($speed=="6") echo ' selected="selected"'; ?>>Fast</option>
+      <option value="16" <?php if($speed=="16") echo ' selected="selected"'; ?>>Normal Fast</option>
+      <option value="32" <?php if($speed=="32") echo ' selected="selected"'; ?>>Normal</option>
+       <option value="48" <?php if($speed=="48") echo ' selected="selected"'; ?>>Normal slow</option>
+        <option value="64" <?php if($speed=="64") echo ' selected="selected"'; ?>>Slow</option>
+         <option value="128" <?php if($speed=="128") echo ' selected="selected"'; ?>>Very Slow</option>
+        
+    </select>
+  
+  
+  <br/>
+  <label for="speed2<?php echo $id; ?>" accesskey="h">Speed effect transition:
+    <input type='text' id='speed2<?php echo $id; ?>'  name='speed2<?php echo $id; ?>'  value='<?php echo $speed2; ?>'/>
+  </label>
+  <br/>
+  </p>
+<p><strong>Text params</strong><br/>
+  Text Font:
+    <select name="text7<?php echo $id; ?>" id="text7<?php echo $id; ?>">
+      <option value="0" <?php if($text7==0) echo ' selected="selected"'; ?>>Arial</option>
+      <option value="1" <?php if($text7==1) echo ' selected="selected"'; ?>>Verdana</option>
+      <option value="2" <?php if($text7==2) echo ' selected="selected"'; ?>>Times</option>
+      <option value="3" <?php if($text7==3) echo ' selected="selected"'; ?>>Trebuchet</option>
+    </select>
+  
+  
+  <br/>
+  <label for="text1<?php echo $id; ?>" accesskey="h">Text Size:
+    <input type='text' id='text1<?php echo $id; ?>'  name='text1<?php echo $id; ?>'  value='<?php echo $text1; ?>'/>
+  </label>
+  
+  <br/>
+  Text Effect:
+  <select name="text2<?php echo $id; ?>" id="text2<?php echo $id; ?>">
+    <option value="normal" <?php if($text2=='normal') echo ' selected="selected"'; ?>>color</option>
+    <option value="overlay" <?php if($text2=='overlay') echo ' selected="selected"'; ?>>overlay</option>
+    <option value="invert" <?php if($text2=='invert') echo ' selected="selected"'; ?>>invert</option>
+    
+    
+    <option value="add" <?php if($text2=='add') echo ' selected="selected"'; ?>>add</option>
+    <option value="darken" <?php if($text2=='darken') echo ' selected="selected"'; ?>>darken</option>
+    <option value="difference" <?php if($text2=='difference') echo ' selected="selected"'; ?>>difference</option>
+    <option value="hardlight" <?php if($text2=='hardlight') echo ' selected="selected"'; ?>>hardlight</option>
+    <option value="layer" <?php if($text2=='layer') echo ' selected="selected"'; ?>>layer</option>
+    <option value="lighten" <?php if($text2=='lighten') echo ' selected="selected"'; ?>>lighten</option>
+    <option value="multiply" <?php if($text2=='multiply') echo ' selected="selected"'; ?>>multiply</option>
+    <option value="screen" <?php if($text2=='screen') echo ' selected="selected"'; ?>>screen</option>
+    <option value="shader" <?php if($text2=='shader') echo ' selected="selected"'; ?>>shader</option>
+    <option value="subtract" <?php if($text2=='subtract') echo ' selected="selected"'; ?>>subtract</option>
+    
+    
+  </select>
+  
+  
+  <br/>
+  <br/>
+  <input type='hidden' id='text5<?php echo $id; ?>'  name='text5<?php echo $id; ?>'  value='<?php echo $text5; ?>'/>
+
+  
+
+  
+    <input type='hidden' id='text6<?php echo $id; ?>'  name='text6<?php echo $id; ?>'  value='<?php echo $text6; ?>'/>
+ 
+</p>
+
+  
+    <input type='hidden' id='round1<?php echo $id; ?>'  name='round1<?php echo $id; ?>'  value='<?php echo $round1; ?>'/>
+
+  
+    <input type='hidden' id='border1<?php echo $id; ?>'  name='border1<?php echo $id; ?>'  value='<?php echo $border1; ?>'/>
+ 
+
+
+<p><br/>
+			  <input type='submit' name='' value='SAVE BANNER <?php echo $id; ?>' />
+		  </p>
+        </fieldset>
+	</form>
+  <form method="post" action="">
+	  <input name="borrar" type="hidden" id="borrar" value="<?php echo $id; ?>">
+     <input type='submit' name='' value='Delete BANNER <?php echo $id; ?>' />
+    </form>
+  <hr />
+</div>
